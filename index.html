@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stella Lobo Pilates · Americana-SP</title>
+<meta name="description" content="Stella Lobo Pilates — Americana-SP. Pilates para aliviar dores e fortalecer o corpo, com especialistas em biomecânica e fisioterapia.">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --berry:#b34384;
+  --berry-dark:#872f61;
+  --berry-light:#f7e9f1;
+  --teal:#2f7d80;
+  --teal-dark:#215c5e;
+  --teal-light:#e5f1f0;
+  --ink:#2a2130;
+  --muted:#6b5f68;
+  --cream:#fbf7f5;
+  --paper:#ffffff;
+  --line:#ece1e8;
+  --r:22px;
+  --shadow:0 20px 44px rgba(135,47,97,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{font-family:'Raleway',system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1140px,100% - 40px);margin-inline:auto}
+section{padding:100px 0;position:relative}
+h1,h2,h3{font-family:'Lora',serif;color:var(--berry-dark);letter-spacing:-.005em}
+h2{font-size:clamp(1.9rem,3.6vw,2.6rem);font-weight:600;line-height:1.18;margin-bottom:16px}
+.lead{color:var(--muted);max-width:50ch;font-size:1.05rem}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 28px;border-radius:999px;font-weight:600;font-size:.95rem;transition:transform .18s,box-shadow .18s,background .18s;border:1.5px solid transparent}
+.btn-berry{background:var(--berry);color:#fff}
+.btn-berry:hover{background:var(--berry-dark);transform:translateY(-2px);box-shadow:0 14px 28px rgba(135,47,97,.3)}
+.btn-outline{border-color:var(--berry);color:var(--berry-dark)}
+.btn-outline:hover{background:var(--berry-light)}
+.btn-white{background:#fff;color:var(--berry-dark)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(0,0,0,.2)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(251,247,245,0);transition:background .3s,box-shadow .3s,backdrop-filter .3s}
+header.scrolled{background:rgba(251,247,245,.92);backdrop-filter:blur(10px);box-shadow:0 4px 24px rgba(42,33,48,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:82px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:48px;width:48px;border-radius:50%;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.brand span{font-family:'Lora',serif;font-weight:600;font-size:1.3rem;color:var(--berry-dark)}
+.menu{display:flex;align-items:center;gap:28px;list-style:none}
+.menu a{font-size:.92rem;font-weight:600;color:var(--ink);padding-bottom:4px;border-bottom:2px solid transparent}
+.menu a:hover{border-color:var(--berry);color:var(--berry-dark)}
+.menu .btn{padding:11px 22px;font-size:.88rem}
+.menu a.btn-berry{color:#fff}
+.burger{display:none;background:none;border:0;font-size:1.8rem;cursor:pointer;color:var(--berry-dark)}
+
+/* hero */
+.hero{padding-top:150px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;z-index:0}
+.hero .blob-1{width:480px;height:480px;background:var(--berry-light);top:-140px;right:-160px}
+.hero .blob-2{width:260px;height:260px;background:var(--teal-light);bottom:-60px;left:-100px}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.eyebrow-tag{display:inline-flex;align-items:center;gap:8px;background:var(--teal-light);color:var(--teal-dark);font-weight:700;font-size:.84rem;padding:8px 16px;border-radius:999px;margin-bottom:20px}
+.eyebrow-tag svg{width:16px;height:16px}
+.hero h1{font-size:clamp(2.5rem,5vw,3.6rem);line-height:1.12;font-weight:600;margin-bottom:22px}
+.hero h1 em{font-style:italic;color:var(--berry)}
+.hero p.lead{font-size:1.12rem;margin-bottom:32px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-photo{position:relative}
+.hero-photo .frame{border-radius:32px 32px 32px 6px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:5/4}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.hero-stat{position:absolute;left:-28px;bottom:28px;background:#fff;border-radius:18px;box-shadow:var(--shadow);padding:16px 20px;display:flex;align-items:center;gap:12px;max-width:230px}
+.hero-stat svg{flex:none;width:30px;height:30px;stroke:var(--berry)}
+.hero-stat b{display:block;font-family:'Lora',serif;font-size:.98rem;color:var(--berry-dark)}
+.hero-stat span{font-size:.8rem;color:var(--muted)}
+
+.trust-row{position:relative;z-index:1;margin-top:76px;padding-top:34px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.trust-row div{display:flex;gap:12px;align-items:flex-start}
+.trust-row svg{flex:none;width:26px;height:26px;stroke:var(--teal);margin-top:2px}
+.trust-row b{display:block;font-family:'Lora',serif;font-size:1rem;color:var(--berry-dark)}
+.trust-row span{color:var(--muted);font-size:.86rem}
+
+/* problema/solução */
+.problem{background:var(--teal-dark);color:#fff}
+.problem .wrap{text-align:center}
+.problem h2{color:#fff;max-width:28ch;margin-inline:auto}
+.problem p.lead{color:rgba(255,255,255,.78);margin-inline:auto}
+.problem-quote{margin-top:44px;font-family:'Lora',serif;font-style:italic;font-size:clamp(1.3rem,2.6vw,1.8rem);line-height:1.5;max-width:46ch;margin-inline:auto;color:#fff}
+.problem-quote span{display:block;margin-top:14px;font-family:'Raleway',sans-serif;font-style:normal;font-weight:700;font-size:.82rem;letter-spacing:.04em;color:var(--teal-light);opacity:.8}
+
+/* sobre */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.about-photo{border-radius:28px 28px 28px 6px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5}
+.about-photo img{width:100%;height:100%;object-fit:cover}
+.about ul{list-style:none;margin-top:28px;display:grid;gap:16px}
+.about li{display:flex;gap:14px;align-items:flex-start}
+.about li svg{flex:none;width:22px;height:22px;stroke:var(--berry);margin-top:3px}
+.about li b{display:block;color:var(--berry-dark);font-family:'Lora',serif;font-size:1.02rem}
+.about li span{color:var(--muted);font-size:.93rem}
+
+/* beneficios */
+.benefits{background:var(--cream)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:48px}
+.card{background:#fff;border-radius:20px;padding:30px 26px;box-shadow:0 10px 26px rgba(42,33,48,.06);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.card .ico{width:52px;height:52px;border-radius:16px;background:var(--berry-light);display:grid;place-items:center;margin-bottom:18px}
+.card .ico svg{width:26px;height:26px;stroke:var(--berry-dark);fill:none;stroke-width:1.9}
+.card h3{font-size:1.14rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.92rem}
+
+/* galeria / depoimentos */
+.gallery-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.tag{display:inline-flex;align-items:center;gap:8px;background:var(--berry-light);color:var(--berry-dark);font-size:.84rem;font-weight:700;padding:8px 16px;border-radius:999px}
+.insta-grid{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.insta-card{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 10px 24px rgba(42,33,48,.1)}
+.insta-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.insta-card:hover img{transform:scale(1.06)}
+.insta-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 16px 14px;background:linear-gradient(0deg,rgba(42,20,35,.9),transparent 65%);color:#fff;font-size:.82rem;font-weight:600;line-height:1.35}
+
+/* contato */
+.contact{background:linear-gradient(165deg,var(--berry-dark) 0%,#5c1f43 100%);color:#fff}
+.contact h2{color:#fff}
+.contact .lead{color:rgba(255,255,255,.8)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:40px;align-items:start}
+.contact .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.info-list{margin-top:36px;display:grid;gap:0}
+.info-list>div{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-top:1px solid rgba(255,255,255,.18)}
+.info-list svg{flex:none;width:22px;height:22px;stroke:var(--teal-light);margin-top:2px}
+.info-list b{display:block;font-family:'Lora',serif;font-size:1.02rem}
+.info-list span,.info-list a{color:rgba(255,255,255,.78);font-size:.93rem}
+.info-list a{text-decoration:underline;text-decoration-color:rgba(255,255,255,.35)}
+.hours{width:100%;border-collapse:collapse;margin-top:6px}
+.hours td{padding:5px 0;font-size:.89rem;color:rgba(255,255,255,.72)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{color:#fff;font-weight:700}
+.hours tr.today td:first-child::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--teal-light);margin-right:8px}
+.panel{background:#fff;color:var(--ink);border-radius:var(--r);padding:36px;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.panel h3{font-family:'Lora',serif;font-size:1.3rem;margin-bottom:22px;color:var(--berry-dark)}
+form{display:grid;gap:20px}
+.field label{display:block;font-size:.78rem;font-weight:700;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+input,textarea,select{width:100%;padding:10px 2px;border:0;border-bottom:1.5px solid var(--line);font:inherit;color:var(--ink);background:transparent}
+input:focus,textarea:focus,select:focus{border-color:var(--berry);outline:none}
+textarea{min-height:76px;resize:vertical}
+form button{justify-self:start;margin-top:4px}
+.map-wrap{margin-top:56px;border-radius:var(--r);overflow:hidden;box-shadow:0 24px 50px rgba(0,0,0,.35);line-height:0}
+.map-wrap iframe{width:100%;height:380px;border:0;display:block}
+
+footer{background:var(--ink);color:rgba(255,255,255,.65);padding:36px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;font-size:.86rem}
+footer .brand span{color:#fff;font-size:1.15rem}
+footer a:hover{color:#fff}
+
+@media(max-width:900px){
+  section{padding:76px 0}
+  .hero{padding-top:118px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-photo{max-width:360px;margin-inline:auto}
+  .hero-stat{left:50%;transform:translateX(-50%);bottom:-24px}
+  .trust-row{grid-template-columns:1fr;gap:18px}
+  .about-grid{grid-template-columns:1fr;gap:36px}
+  .about-photo{max-width:360px;margin-inline:auto}
+  .insta-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+  .burger{display:block}
+  .menu{position:absolute;top:82px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);display:none;padding:10px 0;box-shadow:0 12px 24px rgba(0,0,0,.08)}
+  .menu.open{display:flex}
+  .menu a{padding:16px 24px;border-bottom:1px solid var(--line)}
+  .menu .btn{margin:12px 24px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#top" class="brand"><img src="logo.jpg" alt="Logo Stella Lobo Pilates"><span>Stella Lobo</span></a>
+    <button class="burger" aria-label="Abrir menu" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
+    <ul class="menu" onclick="this.classList.remove('open')">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#beneficios">Benefícios</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a class="btn btn-berry" href="https://wa.me/5519989743860" target="_blank" rel="noopener">Agendar aula</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>Especialistas em biomecânica</span>
+        <h1>Alivie as dores.<br>Fortaleça o <em>corpo</em>.</h1>
+        <p class="lead">Pilates individualizado em Americana-SP, pensado por quem entende de biomecânica e fisioterapia — para você se mover melhor, todos os dias.</p>
+        <div class="cta">
+          <a class="btn btn-berry" href="https://wa.me/5519989743860" target="_blank" rel="noopener">Agendar aula pelo WhatsApp</a>
+          <a class="btn btn-outline" href="https://www.instagram.com/pilatesstellalobo/" target="_blank" rel="noopener">@pilatesstellalobo</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="frame"><img src="img/pl-04-top.jpg" alt="Estúdio Stella Lobo Pilates, com reformers e luz natural"></div>
+        <div class="hero-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-9.3-9A5.4 5.4 0 0 1 12 6a5.4 5.4 0 0 1 9.3 6c-2.3 4.6-9.3 9-9.3 9z"/></svg><div><b>Cuidado individual</b><span>biomecânica aplicada a cada corpo</span></div></div>
+      </div>
+    </div>
+
+    <div class="trust-row">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 1 16 0 8 8 0 0 1-16 0z"/><path d="M12 8v4l3 2"/></svg><div><b>Horários flexíveis</b><span>manhã e noite, de segunda a sábado</span></div></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg><div><b>Equipe especializada</b><span>fisioterapeutas e profissionais de pilates</span></div></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7.4-7-12a7 7 0 0 1 14 0c0 4.6-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><div><b>Em Americana-SP</b><span>estúdio na Vila Nova Americana</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="wrap">
+    <h2>O problema não é a falta de tempo.</h2>
+    <p class="lead">É colocar o seu corpo em último lugar. O Pilates no Stella Lobo existe para inverter essa ordem — com aulas pensadas para aliviar dores, corrigir a postura e devolver disposição ao seu dia a dia.</p>
+    <p class="problem-quote">"O problema não é que você não tem tempo. É que você acha que todo o resto é mais importante do que você."<span>— do nosso Instagram</span></p>
+  </div>
+</section>
+
+<section id="sobre" class="about">
+  <div class="wrap about-grid">
+    <div class="about-photo"><img src="img/pl-02.jpg" alt="Stella Lobo, fisioterapeuta e especialista em Pilates"></div>
+    <div>
+      <h2>Fisioterapia e Pilates, na mesma aula</h2>
+      <p class="lead">À frente do estúdio, Stella Lobo une a formação em fisioterapia à prática do Pilates para olhar o corpo como um todo — não só o sintoma, mas a causa. Cada aluno é avaliado individualmente, com exercícios ajustados à sua biomecânica.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><div><b>Avaliação individual</b><span>o plano de aula acompanha o seu corpo, não o contrário</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg><div><b>Resultado sentido no corpo</b><span>menos dor, mais disposição, postura que muda de verdade</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-9.3-9A5.4 5.4 0 0 1 12 6a5.4 5.4 0 0 1 9.3 6c-2.3 4.6-9.3 9-9.3 9z"/></svg><div><b>Ambiente acolhedor</b><span>turmas pequenas, sem pressa e sem comparação</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="beneficios" class="benefits">
+  <div class="wrap">
+    <h2>O que o Pilates faz pelo seu corpo</h2>
+    <p class="lead">Mais do que exercício: um método para se mover com menos dor e mais consciência corporal.</p>
+    <div class="grid">
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.3-9A5.4 5.4 0 0 1 12 6a5.4 5.4 0 0 1 9.3 6c-2.3 4.6-9.3 9-9.3 9z" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Alívio de dores</h3><p>Trabalho terapêutico para dores nas costas, no pescoço e nas articulações.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 11h6"/></svg></div><h3>Fortalecimento do core</h3><p>Estabilidade de verdade, que sustenta a coluna no dia a dia.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M7 7l5-4 5 4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Postura e equilíbrio</h3><p>Correção postural progressiva, sentida dentro e fora do estúdio.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><h3>Biomecânica individualizada</h3><p>Cada exercício pensado para o seu corpo, sua história e suas limitações.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="gallery-head">
+      <div>
+        <h2>O estúdio, por dentro</h2>
+        <p class="lead">Um pouco do que vivemos nas aulas — direto do nosso Instagram.</p>
+      </div>
+      <a class="tag" href="https://www.instagram.com/pilatesstellalobo/" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>@pilatesstellalobo</a>
+    </div>
+    <div class="insta-grid">
+      <figure class="insta-card"><img loading="lazy" src="img/pl-05.jpg" alt="Alunas em aula de Pilates, se divertindo no estúdio"><figcaption>Sente menos dores. Sua postura mudou.</figcaption></figure>
+      <figure class="insta-card"><img loading="lazy" src="img/pl-06.jpg" alt="Aluna em exercício no reformer"><figcaption>Não acorda mais travado. Respira melhor.</figcaption></figure>
+      <figure class="insta-card"><img loading="lazy" src="img/pl-08.jpg" alt="Alunas em aula no reformer"><figcaption>Sente mais disposição no dia a dia.</figcaption></figure>
+      <figure class="insta-card"><img loading="lazy" src="img/pl-09.jpg" alt="Aula de Pilates em grupo no estúdio"><figcaption>Está mais forte. E já sente falta quando não faz.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <h2>Comece sua transformação</h2>
+        <p class="lead">Agende uma aula e sinta a diferença de um Pilates pensado para o seu corpo.</p>
+        <div class="cta">
+          <a class="btn btn-white" href="https://wa.me/5519989743860" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+          <a class="btn btn-outline" style="border-color:rgba(255,255,255,.5);color:#fff" href="https://www.instagram.com/pilatesstellalobo/" target="_blank" rel="noopener">Seguir no Instagram</a>
+        </div>
+        <div class="info-list">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7.4-7-12a7 7 0 0 1 14 0c0 4.6-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><div><b>Endereço</b><span>R. Caetés, 519 – Nova Americana, Americana – SP, 13466-150</span></div></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2.2z"/></svg><div><b>Telefone</b><span><a href="tel:+5519989743860">(19) 98974-3860</a></span></div></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <div><b>Horário de funcionamento</b>
+              <table class="hours">
+                <tr data-day="1"><td>Segunda-feira</td><td>06:00–20:30</td></tr>
+                <tr data-day="2"><td>Terça-feira</td><td>06:00–20:00</td></tr>
+                <tr data-day="3"><td>Quarta-feira</td><td>06:00–20:30</td></tr>
+                <tr data-day="4"><td>Quinta-feira</td><td>06:00–20:00</td></tr>
+                <tr data-day="5"><td>Sexta-feira</td><td>06:00–20:00</td></tr>
+                <tr data-day="6"><td>Sábado</td><td>07:00–12:00</td></tr>
+                <tr data-day="0"><td>Domingo</td><td>Fechado</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Agendar uma aula experimental</h3>
+        <form id="f">
+          <div class="field"><label for="nome">Seu nome</label><input id="nome" name="nome" required></div>
+          <div class="field"><label for="obj">O que você gostaria de melhorar?</label>
+            <select id="obj" name="obj"><option>Aliviar dores</option><option>Fortalecer o corpo</option><option>Melhorar a postura</option><option>Recuperação pós-lesão</option></select>
+          </div>
+          <div class="field"><label for="msg">Mensagem (opcional)</label><textarea id="msg" name="msg"></textarea></div>
+          <button class="btn btn-berry" type="submit">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps?q=R.+Caet%C3%A9s,+519+-+Nova+Americana,+Americana+-+SP,+13466-150&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de localização do Stella Lobo Pilates – R. Caetés, 519, Americana-SP"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="brand" style="display:flex;align-items:center;gap:10px"><img src="logo.jpg" alt="" style="height:30px;width:30px;border-radius:50%"><span>Stella Lobo Pilates</span></a>
+    <span>© <span id="y"></span> Stella Lobo Pilates – Americana-SP</span>
+    <a href="https://www.instagram.com/pilatesstellalobo/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</footer>
+
+<script>
+  const h=document.querySelector('header');
+  const onScroll=()=>h.classList.toggle('scrolled',scrollY>40);
+  onScroll();addEventListener('scroll',onScroll,{passive:true});
+  document.getElementById('y').textContent=new Date().getFullYear();
+  const todayRow=document.querySelector(`.hours tr[data-day="${new Date().getDay()}"]`);
+  if(todayRow) todayRow.classList.add('today');
+  document.getElementById('f').addEventListener('submit',e=>{
+    e.preventDefault();
+    const d=new FormData(e.target);
+    const t=`Olá! Sou ${d.get('nome')} e gostaria de agendar uma aula experimental de Pilates. Meu objetivo: ${d.get('obj')}. ${d.get('msg')||''}`;
+    open('https://wa.me/5519989743860?text='+encodeURIComponent(t),'_blank');
+  });
+</script>
+</body>
+</html>
