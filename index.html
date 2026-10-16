@@ -73,7 +73,7 @@ header.scrolled{background:rgba(251,247,245,.92);backdrop-filter:blur(10px);box-
 .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
 .hero-photo{position:relative}
 .hero-photo .frame{border-radius:32px 32px 32px 6px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:5/4}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:28% 40%}
 .hero-stat{position:absolute;left:-28px;bottom:28px;background:#fff;border-radius:18px;box-shadow:var(--shadow);padding:16px 20px;display:flex;align-items:center;gap:12px;max-width:230px}
 .hero-stat svg{flex:none;width:30px;height:30px;stroke:var(--berry)}
 .hero-stat b{display:block;font-family:'Lora',serif;font-size:.98rem;color:var(--berry-dark)}
@@ -123,11 +123,25 @@ header.scrolled{background:rgba(251,247,245,.92);backdrop-filter:blur(10px);box-
 .insta-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 16px 14px;background:linear-gradient(0deg,rgba(42,20,35,.9),transparent 65%);color:#fff;font-size:.82rem;font-weight:600;line-height:1.35}
 
 /* contato */
-.contact{background:linear-gradient(165deg,var(--berry-dark) 0%,#5c1f43 100%);color:#fff}
+.contact{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--berry-dark) 0%,#5c1f43 100%);color:#fff}
+.contact .blob{position:absolute;border-radius:50%;background:rgba(255,255,255,.04);z-index:0}
+.contact .blob-1{width:420px;height:420px;top:-160px;left:-140px}
+.contact .blob-2{width:260px;height:260px;bottom:-100px;right:8%}
+.contact .wrap{position:relative;z-index:1}
 .contact h2{color:#fff}
 .contact .lead{color:rgba(255,255,255,.8)}
+.rating-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);padding:10px 18px;border-radius:999px;margin-bottom:22px}
+.rating-badge .stars{display:flex;gap:2px}
+.rating-badge .stars svg{width:14px;height:14px;fill:#f0c24b}
+.rating-badge b{font-family:'Lora',serif;font-weight:700;font-size:1.02rem}
+.rating-badge span{color:rgba(255,255,255,.75);font-size:.86rem}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:40px;align-items:start}
 .contact .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.contact .btn-outline{border-color:rgba(255,255,255,.45);color:#fff}
+.contact .btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.reassure{margin-top:16px;font-size:.85rem;color:rgba(255,255,255,.62);display:flex;align-items:center;gap:7px}
+.reassure svg{width:15px;height:15px;stroke:var(--teal-light);flex:none}
+.form-note{margin-top:2px;font-size:.78rem;color:var(--muted);text-align:center}
 .hours{width:100%;border-collapse:collapse;margin-top:6px}
 .hours td{padding:5px 0;font-size:.89rem;color:rgba(255,255,255,.72)}
 .hours td:last-child{text-align:right}
@@ -212,7 +226,7 @@ footer a:hover{color:#fff}
         </div>
       </div>
       <div class="hero-photo">
-        <div class="frame"><img src="img/pl-04-top.jpg" alt="Estúdio Stella Lobo Pilates, com reformers e luz natural"></div>
+        <div class="frame"><img src="img/pl-10-hero.jpg" alt="Estúdio Stella Lobo Pilates, com o mural autoral e luz natural"></div>
         <div class="hero-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-9.3-9A5.4 5.4 0 0 1 12 6a5.4 5.4 0 0 1 9.3 6c-2.3 4.6-9.3 9-9.3 9z"/></svg><div><b>Cuidado individual</b><span>biomecânica aplicada a cada corpo</span></div></div>
       </div>
     </div>
@@ -280,15 +294,28 @@ footer a:hover{color:#fff}
 </section>
 
 <section id="contato" class="contact">
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
   <div class="wrap">
     <div class="contact-grid">
       <div>
+        <div class="rating-badge">
+          <span class="stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8-5.1-4.7 6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8-5.1-4.7 6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8-5.1-4.7 6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8-5.1-4.7 6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8-5.1-4.7 6.9-.8z"/></svg>
+          </span>
+          <b>5,0</b><span>no Google (45 avaliações)</span>
+        </div>
         <h2>Comece sua transformação</h2>
-        <p class="lead">Agende uma aula e sinta a diferença de um Pilates pensado para o seu corpo.</p>
+        <p class="lead">Agende uma aula experimental e sinta, já nas primeiras semanas, o que é treinar com quem entende de biomecânica e dor — não só de exercício.</p>
         <div class="cta">
           <a class="btn btn-white" href="https://wa.me/5519989743860" target="_blank" rel="noopener">Chamar no WhatsApp</a>
-          <a class="btn btn-outline" style="border-color:rgba(255,255,255,.5);color:#fff" href="https://www.instagram.com/pilatesstellalobo/" target="_blank" rel="noopener">Seguir no Instagram</a>
+          <a class="btn btn-outline" href="https://www.instagram.com/pilatesstellalobo/" target="_blank" rel="noopener">Seguir no Instagram</a>
         </div>
+        <p class="reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg>Resposta rápida pelo WhatsApp, sem compromisso.</p>
       </div>
       <div class="panel">
         <h3>Agendar uma aula experimental</h3>
@@ -299,6 +326,7 @@ footer a:hover{color:#fff}
           </div>
           <div class="field"><label for="msg">Mensagem (opcional)</label><textarea id="msg" name="msg"></textarea></div>
           <button class="btn btn-berry" type="submit">Enviar pelo WhatsApp</button>
+          <p class="form-note">Você será redirecionado ao WhatsApp para confirmar.</p>
         </form>
       </div>
     </div>
